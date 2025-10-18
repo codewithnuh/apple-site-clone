@@ -17,7 +17,7 @@ export const Hero = () => {
       <div className='flex flex-col space-y-4 md:container md:mx-auto lg:flex-row lg:items-center md:justify-between md:px-4'>
         <div className='space-y-2 text-center md:text-left'>
           <p className='text-xl md:text-2xl font-bold text-white'>MacBook Pro</p>
-          <h1 className='md: mx-auto max-w-[82%] bg-gradient-to-r from-blue-100 to-cyan-800 bg-clip-text text-3xl md:text-6xl  font-bold text-transparent md:max-w-full'>
+          <h1 className='md:mx-auto max-w-[87%] bg-gradient-to-r from-blue-100 to-cyan-800 bg-clip-text pb-1 text-3xl md:text-6xl  font-bold text-transparent md:max-w-full '>
             14‑inch model. Now  <br className='hidden md:block'/> supercharged by M5.
           </h1>
           <p className='text-sm md:text-base text-white'>
