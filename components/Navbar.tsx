@@ -1,11 +1,28 @@
+'use client'
 import Image from "next/image";
 import { Container } from "./shared/Container";
 import Link from "next/link";
+import { useEffect,useState } from "react";
 
 export const Navbar = () => {
-  return <header className="py-3">
+    const [isScrolled,setIsScrolled]=useState(false);
+    useEffect(()=>{
+      const handleScroll = () => {
+        // Add glassy effect when scrolled past 50px
+        setIsScrolled(window.scrollY > 50);
+      };
+      window.addEventListener('scroll', handleScroll);
+      
+      // Cleanup on unmount
+      return () => window.removeEventListener('scroll', handleScroll);
+    },[])
+  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    isScrolled
+      ? 'bg-black/50 backdrop-blur-md '
+      : 'bg-transparent'
+  }`}>
     <Container >
-      <nav className="flex flex-between">
+      <nav className="flex flex-between py-2">
         <div><Image src={'/logo.svg'} alt="apple logo" width={30} height={30} />
         </div>
         <ul role="list" className="hidden md:flex items-center space-x-2">
