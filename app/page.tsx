@@ -1,8 +1,6 @@
-import { Hero } from "@/components/Hero"
+import { Hero } from '@/components/Hero';
 
- const HomePage=()=>{
-  return (
-    <Hero/>
-  )
-}
- export default HomePage;
+const HomePage = () => {
+  return <Hero />;
+};
+export default HomePage;

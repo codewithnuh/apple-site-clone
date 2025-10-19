@@ -78,12 +78,19 @@
   --color-dark-100: #86868b;
   --color-dark-200: #2e2e30;
   --color-light-100: #adb5bd;
-  --shadow-glow-soft: 0 0 12px rgb(59 130 246 / 0.7), 0 0 24px rgb(59 130 246 / 0.4);
-  --shadow-glow-bright: 0 0 20px rgb(59 130 246 / 0.9), 0 0 40px rgb(59 130 246 / 0.5);
+  --shadow-glow-soft:
+    0 0 12px rgb(59 130 246 / 0.7), 0 0 24px rgb(59 130 246 / 0.4);
+  --shadow-glow-bright:
+    0 0 20px rgb(59 130 246 / 0.9), 0 0 40px rgb(59 130 246 / 0.5);
 }
 @keyframes smoothGlow {
-  0%, 100% { text-shadow: var(--shadow-glow-soft); }
-  50% { text-shadow: var(--shadow-glow-bright); }
+  0%,
+  100% {
+    text-shadow: var(--shadow-glow-soft);
+  }
+  50% {
+    text-shadow: var(--shadow-glow-bright);
+  }
 }
 html {
   width: 100vw;
